@@ -17,9 +17,26 @@ class App extends Component {
 
   render() {
 
-    const mappedHouseData = this.props.houseData.map( house => <HouseCard houseData={house}/> )
+    const mappedHouseData = this.props.houseData.map( house => <HouseCard key={house.name} houseData={house}/> )
     
-    console.log('RENERED');
+    if(!this.props.houseData.length){
+      console.log('FIRED');
+      return (
+        <div className='App'>
+          <div className='App-header'>
+            <img src={logo} className='App-logo' alt='logo' />
+            <h2>Welcome to Westeros</h2>
+            <button onClick={() => {
+              this.props.fakeAction();
+              alert(this.props.fake);
+            }}> FAKE ACTION</button>
+          </div>
+          <div className='Display-info'>
+            <img src={require('./wolf.gif')} alt='gif of running wolf' />
+          </div>
+        </div>
+      )
+    }
   return (
       <div className='App'>
         <div className='App-header'>
