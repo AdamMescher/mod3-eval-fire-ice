@@ -44,7 +44,8 @@
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
   justify-items: center;
 }
 
