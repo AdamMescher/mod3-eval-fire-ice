@@ -1,7 +1,10 @@
-import AppReducer from '../../reducers/AppReducer';
+import { houseData } from '../../reducers/AppReducer';
 
 describe(`APP REDUCER`, () => {
-  it(`should have a test`, () => {
-    expect(true).toBe(false)
+  it(`should return a default state`, () => {
+    const mockAction = {type: ''}
+    const expectation = houseData(mockAction)
+
+    expect()
   })
 })
