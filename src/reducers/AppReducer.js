@@ -1,6 +1,6 @@
 export const houseData = (state = [], action) => {
   switch( action.type ){
-    case 'SET_USER_HOUSE_DATA':
+    case 'SET_HOUSE_DATE_ARRAY':
       return action.houseData
     default:
       return state;
