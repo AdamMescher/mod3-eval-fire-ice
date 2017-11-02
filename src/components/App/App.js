@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes, { shape, func, string } from 'prop-types';
 import logo from './logo.svg';
-import './App.css';
 import { connect } from 'react-redux';
 import { fakeAction } from '../../actions';
+import HouseCard from '../HouseCard/HouseCard';
+
 class App extends Component {
 
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
           }}> FAKE ACTION</button>
         </div>
         <div className='Display-info'>
+          <HouseCard />
         </div>
       </div>
     );
