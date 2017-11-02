@@ -3,3 +3,8 @@ export const houseData = (houseData) => ({
   houseData
 });
 
+export const swornMembers = () => ({
+  type: 'SET_SWORN_MEMBERS_OBJECT',
+  swornMembers
+});
+
