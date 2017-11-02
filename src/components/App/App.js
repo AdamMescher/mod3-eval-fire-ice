@@ -26,13 +26,9 @@ class App extends Component {
           <div className='App-header'>
             <img src={logo} className='App-logo' alt='logo' />
             <h2>Welcome to Westeros</h2>
-            <button onClick={() => {
-              this.props.fakeAction();
-              alert(this.props.fake);
-            }}> FAKE ACTION</button>
           </div>
           <div className='Display-info'>
-            <img src={require('./wolf.gif')} alt='gif of running wolf' />
+            <img id='wolf' src={require('./wolf.gif')} alt='gif of running wolf' />
           </div>
         </div>
       )
@@ -42,10 +38,6 @@ class App extends Component {
         <div className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
           <h2>Welcome to Westeros</h2>
-          <button onClick={() => {
-            this.props.fakeAction();
-            alert(this.props.fake);
-          }}> FAKE ACTION</button>
         </div>
         <div className='Display-info'>
           {mappedHouseData}
@@ -57,7 +49,9 @@ class App extends Component {
 
 App.propTypes = {
   fake: shape({ fake: string }),
-  fakeAction: func.isRequired
+  fakeAction: func.isRequired,
+  houseData: PropTypes.array,
+  setHouseData: func.isRequired
 };
 
 const mapStateToProps = ({ fake }) => ({ fake });
